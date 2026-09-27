@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns:th="http://www.thymeleaf.org">
-<head><meta charset="UTF-8"><title th:text="${title}">Страница автора</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}">Страница автора</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
 <body>
-<h1>Информация об авторе страницы</h1>
-<p th:text="'Автор страницы: ' + ${author}">Автор страницы</p>
-<a th:href="@{/}">На главную</a>
+<main class="card">
+    <p class="eyebrow">Лабораторная работа № 1</p>
+    <h1>Информация об авторе страницы</h1>
+    <p class="lead" th:text="'Автор страницы: ' + ${author}">Автор страницы</p>
+    <a class="text-link" th:href="@{/}">На главную</a>
+</main>
 </body>
 </html>

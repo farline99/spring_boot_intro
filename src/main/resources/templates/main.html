@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns:th="http://www.thymeleaf.org">
-<head><meta charset="UTF-8"><title th:text="${title}">Главная страница</title></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}">Главная страница</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
 <body>
-<h1 th:text="${data}">Лабораторная работа № 1</h1>
-<p th:text="${content}">Знакомство со Spring Framework</p>
-<a th:href="@{/form}">Заполнить анкету</a>
-<a th:href="@{/about}">Об авторе</a>
+<main class="card">
+    <p class="eyebrow">Spring Boot · Thymeleaf</p>
+    <h1 th:text="${data}">Лабораторная работа № 1</h1>
+    <p class="lead" th:text="${content}">Знакомство со Spring Framework</p>
+    <div class="actions">
+        <a class="button" th:href="@{/form}">Заполнить анкету</a>
+        <a class="text-link" th:href="@{/about}">Об авторе</a>
+    </div>
+</main>
 </body>
 </html>
