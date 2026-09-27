@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title th:text="${title}">Главная страница</title></head>
+<body>
+<h1 th:text="${data}">Лабораторная работа № 1</h1>
+<p th:text="${content}">Знакомство со Spring Framework</p>
+<a th:href="@{/about}">Об авторе</a>
+</body>
+</html>
