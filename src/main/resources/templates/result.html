@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Студент</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Анкета студента</p>
+    <h1>Данные получены</h1>
+    <dl class="details">
+        <div><dt>ID</dt><dd th:text="${student.id}">13</dd></div>
+        <div><dt>Фамилия</dt><dd th:text="${student.surname}">Иванов</dd></div>
+        <div><dt>Имя</dt><dd th:text="${student.name}">Иван</dd></div>
+        <div><dt>Отчество</dt><dd th:text="${student.patronymic}">Иванович</dd></div>
+        <div><dt>E-mail</dt><dd th:text="${student.email}">student@example.ru</dd></div>
+        <div><dt>Год поступления</dt><dd th:text="${student.admissionYear}">2023</dd></div>
+        <div><dt>Группа</dt><dd th:text="${student.group}">GRp-123</dd></div>
+        <div><dt>Логин</dt><dd th:text="${student.login}">student-grp123-13</dd></div>
+    </dl>
+    <a class="button" th:href="@{/form}">Ввести новые данные</a>
+</main>
+</body>
+</html>

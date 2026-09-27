@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Новый студент</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Анкета студента</p>
+    <h1>Расскажите о себе</h1>
+    <p class="lead">Группа и логин будут сформированы автоматически.</p>
+    <form th:action="@{/form}" th:object="${student}" method="post">
+        <div class="grid">
+            <label>ID <input type="number" min="1" th:field="*{id}" required></label>
+            <label>Год поступления <input type="number" min="1000" max="9999" th:field="*{admissionYear}" required></label>
+            <label>Фамилия <input type="text" th:field="*{surname}" required></label>
+            <label>Имя <input type="text" th:field="*{name}" required></label>
+            <label>Отчество <input type="text" th:field="*{patronymic}" required></label>
+            <label>E-mail <input type="email" th:field="*{email}" required></label>
+        </div>
+        <div class="actions">
+            <button type="submit">Показать результат</button>
+            <button class="secondary" type="reset">Сбросить</button>
+        </div>
+    </form>
+    <a class="text-link" th:href="@{/}">На главную</a>
+</main>
+</body>
+</html>
